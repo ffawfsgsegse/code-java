@@ -54,7 +54,15 @@
                     alert(` Dữ liệu không hợp lệ`);
                     return;
                 }
-
+                    function ara(nam){
+                        if(nam%400===0|| nam % 4 ===0 && nam % 100!=0){
+                                return true;
+                        }else{
+                                return false
+                        }
+                    }
+                    
+            
                 switch(thang){
                     case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                         inra3+=(` tháng ${thang} có 31 ngày`);
@@ -62,7 +70,7 @@
                     case 4: case 6: case 9: case 11:
                         inra+=(` tháng ${thang} có 30 ngày`);
                         break;
-                    case 2:
+                    case 2: 
                         if(nam % 400 === 0 || nam % 4 ===0 && nam % 100 !=0 ){
                             inra3+=(` tháng ${thang} có 29 ngày ( năm nhuận)`);
                         }else{

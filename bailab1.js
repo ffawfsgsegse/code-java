@@ -1,4 +1,4 @@
-// Nhập vào 1 số n kiểm tra số là chẵn lẻ
+// Nhập vào 1 số n kiểm tra số là chẵn lẻ    <psan  style:"codor: red"
 
     let acl = parseInt (prompt(` Nhập để kiểm tra số là chẵn lẻ`));
     if (acl % 2 == 0){
@@ -63,6 +63,7 @@
     }else {
         alert (` Không phải số hoàn thiện ${shh}`);
     }
+
 
 // Kiểm tra năm nhuận
 

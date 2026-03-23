@@ -176,9 +176,44 @@
         //         output.innerHTML=inra
         //     })
 
-        const maytinh={
-            id: "1",
-            color: "den",
-            hang: "asus",
-            ram: "8gb",
-        };
+        // const maytinh={
+        //     id: "1",
+        //     color: "den",
+        //     hang: "asus",
+        //     ram: "8gb",
+        // };
+
+        const products = [
+  {
+    id: 1,
+    name: "Laptop Dell Inspiron",
+    price: 15000000,
+    category: "Laptop",
+    stock: 10,
+    image: "images/laptop-dell.jpg"
+  },
+  {
+    id: 2,
+    name: "Chuột Logitech M331",
+    price: 350000,
+    category: "Phụ kiện",
+    stock: 25,
+    image: "images/logitech-m331.jpg"
+  },
+  {
+    id: 3,
+    name: "Bàn phím cơ AKKO",
+    price: 1200000,
+    category: "Phụ kiện",
+    stock: 8,
+    image: "images/akko-keyboard.jpg"
+  },
+  {
+    id: 4,
+    name: "Màn hình LG 24 inch",
+    price: 3200000,
+    category: "Màn hình",
+    stock: 5,
+    image: "images/lg-24inch.jpg"
+  }
+]

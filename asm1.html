@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="asm1.css">
+</head>
+<body>
+    <!--  -->
+    <div class="main-background">
+        <div class="login-card">
+            <h1>Login</h1>
+
+            <form>
+                <div class="input-box">
+                    <label>Username</label>
+                    <div class="input-field">
+                        <i class="fa-regular fa-user"></i>                        
+                        <input type="text" id ="tk" placeholder="Type your username" required oninvalid=" this.setCustomValidity('Bạn ơi, đừng quên nhập tên nhé!')"><!--  required hiện thông báo rằng bạn chưa có nhaapk dữ liệu -->
+                          <!-- oninvalid=" this.setCustomValidity dùng câu lệnh này thì có thể thay đổi câu hiện thông báo nhắc nhở, khi chưa nhập dữ liệu -->
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="mk" placeholder="Type your password" required >  
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+                
+                <button type="button" id="ok" class="login-btn">LOGIN</button>
+                
+                 <div id="ketqua"></div>
+                
+            </form>
+
+            <div class="social-login">
+                <span>Or Sign Up Using</span>
+                <div class="social-icons">
+                    <a href="#" class="fb"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="tw"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="gg"><i class="fa-brands fa-google"></i></a>
+                </div>
+            </div>
+
+            <div class="signup-link">
+                <span>Or Sign Up Using</span>
+                <a href="#">SIGN UP</a>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <script src="asm1.js"></script>
+</body>
+</html>

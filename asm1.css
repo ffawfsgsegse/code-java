@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.main-background {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #4ed9e0, #cf16f0); /* Màu nền chuyển sắc */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: #fff;
+    width: 380px;
+    padding: 40px 35px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.login-card h1 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Cấu trúc input */
+.input-box {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.input-field i {
+    color: #999;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.input-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+.input-field:focus-within {
+    border-bottom-color: #cf16f0;
+}
+
+.forgot-pass {
+    text-align: right;
+    margin-top: 8px;
+}
+
+.forgot-pass a {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+}
+
+/* Nút bấm Gradient */
+.login-btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #4ed9e0, #cf16f0);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 30px 0;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.login-btn:hover {
+    background-position: right center; /* Hiệu ứng trượt màu khi hover */
+}
+
+/* Social Login */
+.social-login span, .signup-link span {
+    font-size: 13px;
+    color: #666;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.fb { background-color: #3b5998; }
+.tw { background-color: #1da1f2; }
+.gg { background-color: #ea4335; }
+
+/* Link Sign Up */
+.signup-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
