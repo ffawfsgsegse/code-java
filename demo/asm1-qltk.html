@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Tài Khoản</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; padding: 20px; }
+        .container { max-width: 900px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .status-disabled { color: red; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mb-4 text-center text-primary text-uppercase">Module Quản Lý Tài Khoản</h2>
+
+    <div class="card mb-4">
+        <div class="card-header">Thêm Tài Khoản Mới</div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <input type="text" id="usernameInput" class="form-control" placeholder="Username (Duy nhất)">
+                </div>
+                <div class="col-md-5">
+                    <input type="text" id="nameInput" class="form-control" placeholder="Họ và Tên">
+                </div>
+                <div class="col-md-2">
+                    <button onclick="handleFormAdd()" class="btn btn-success w-100">Thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm theo tên..." onkeyup="handleSearch()">
+    </div>
+<a href="asm1-qlsp.html">
+    ← Module Quản Lý Sản Phẩm (Product Management)
+</a>
+    <table class="table table-hover border">
+        <thead class="table-dark">
+            <tr>
+                <th>Username</th>
+                <th>Họ và Tên</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            </tbody>
+    </table>
+</div>
+ <a href="asm1.html">
+    ← Quay lại Trang chủ
+</a>
+
+<script src="asm1-qltk.js"></script>
+</body>
+</html>

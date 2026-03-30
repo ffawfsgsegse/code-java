@@ -44,7 +44,7 @@ const aClick=document.getElementById(`adangky`);
                     const mockData = [{
       name: 'admin',
       email: 'admin@gmail.com',
-      password: '123456'
+      password: '12345678'
     }]
     localStorage.setItem('users', JSON.stringify(mockData))
     return mockData
@@ -65,7 +65,7 @@ const aClick=document.getElementById(`adangky`);
 
             // lưu vào localstorage
 
-            localStorage.setItem(`user`,JSON.stringify(listuser));
+            localStorage.setItem(`users`,JSON.stringify(listuser));
                 alert(` Đăng ký thành công`);
                 return;
         }else {
