@@ -217,3 +217,103 @@
     image: "images/lg-24inch.jpg"
   }
 ]
+
+const productList = document.getElementById('product-list');
+
+function renderProducts(data) {
+  // Duyệt qua mảng và tạo HTML cho từng item
+  const htmlContent = data.map(product => {
+    return `
+      <div class="product-card" style="border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 8px;">
+        <img src="${product.image}" alt="${product.name}" style="width: 150px; height: auto;">
+        <h3>${product.name}</h3>
+        <p>Giá: <strong>${product.price.toLocaleString()} VNĐ</strong></p>
+        <p>Danh mục: ${product.category}</p>
+        <p>Kho: ${product.stock}</p>
+        <button onclick="addToCart(${product.id})">Mua ngay</button>
+      </div>
+    `;
+  }).join(''); // Nối các phần tử mảng thành một chuỗi
+
+  // Chèn chuỗi HTML vào container
+  productList.innerHTML = htmlContent;
+}
+
+// Gọi hàm để hiển thị
+renderProducts(products);
+
+// Hàm phụ để kiểm tra sự kiện nút bấm
+function addToCart(id) {
+  alert("Đã thêm sản phẩm có ID " + id + " vào giỏ hàng!");
+}
+
+
+const products = [
+  {
+    id: 1,
+    name: "Laptop Dell Inspiron",
+    price: 15000000,
+    category: "Laptop",
+    stock: 10,
+    image: "images/laptop-dell.jpg"
+  },
+  {
+    id: 2,
+    name: "Chuột Logitech M331",
+    price: 350000,
+    category: "Phụ kiện",
+    stock: 25,
+    image: "images/logitech-m331.jpg"
+  },
+  {
+    id: 3,
+    name: "Bàn phím cơ AKKO",
+    price: 1200000,
+    category: "Phụ kiện",
+    stock: 8,
+    image: "images/akko-keyboard.jpg"
+  },
+  {
+    id: 4,
+    name: "Màn hình LG 24 inch",
+    price: 3200000,
+    category: "Màn hình",
+    stock: 5,
+    image: "images/lg-24inch.jpg"
+  }
+]
+
+  function hienthi(){
+    const tableBody= document.getElementById(`sanpham`);
+          tableBody.innerHTML="";
+
+          products.forEach((a, index)=>{ // foreach duyệt phần tử mang, thay vì dùng for 
+            tableBody.innerHTML+=`
+            <tr>
+              <td>${a.id}</td>
+              <td>${a.name}</td>
+              <td><img src ="${a.image}"></td>
+              <td>${a.price}</td>
+              <td>${a.category}</td>
+              <td>${a.stock}</td>
+            </tr>
+            `;
+
+
+          })
+  }
+  hienthi();  // gọi hàm để  hiển thị
+
+
+window.onload = function() {
+    // 1. Lấy thông tin người dùng hiện tại từ localStorage
+    const currentUser = localStorage.getItem('currentUser');
+
+    // 2. Kiểm tra nếu không có dữ liệu (chưa đăng nhập)
+    if (!currentUser) {
+        alert("Bạn cần đăng nhập để truy cập trang này!");
+        // 3. Chuyển hướng về trang login
+        window.location.href = "login.html"; 
+    }
+};
+

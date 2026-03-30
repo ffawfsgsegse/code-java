@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="dangky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="register-container">
+        <form action="register_process.php" method="POST" class="register-form">
+            <h2>Tạo Tài Khoản</h2>
+            <p>Vui lòng điền thông tin bên dưới</p>
+
+            <div class="input-group">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="dkname" name="fullname" placeholder="Họ và tên" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="dkemail" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="dkpassword" name="password" placeholder="Mật khẩu" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa-solid fa-shield-halved"></i>
+                <input type="password" id="dkconfirmpassword" name="re-password" placeholder="Xác nhận mật khẩu" required>
+            </div>
+
+            <button type="button" id="adangky" class="btn-register">Đăng Ký</button>
+
+            <div class="footer-links">
+                <span>Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></span>
+            </div>
+        </form>
+    </div>
+    <script src="dangky.js"></script>
+</body>
+</html>
